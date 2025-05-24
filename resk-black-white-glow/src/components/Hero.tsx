@@ -1,13 +1,22 @@
-import React from 'react';
+import React, { Suspense } from "react";
+import Spline from "@splinetool/react-spline";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Github, Linkedin, Mail, MapPin, Instagram } from "lucide-react";
+import {
+  ArrowRight,
+  Github,
+  Linkedin,
+  Mail,
+  MapPin,
+  Instagram,
+} from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative py-20 md:py-28 overflow-hidden">
-      <div className="container relative z-10 px-4 md:px-6">
-        <div className="grid gap-6 lg:grid-cols-1 lg:gap-12 items-center">
-          <div className="space-y-4 backdrop-blur-sm bg-white/10 p-6 rounded-lg border border-white/20 max-w-2xl mx-auto">
+    <section className="relative py-20 md:py-28 overflow-hidden bg-[#E3E3E3]">
+      <div className="container relative z-10 px-4 md:px-6 dark:text-white">
+        <div className="grid gap-8 lg:grid-cols-2 items-center">
+          {/* Text Content */}
+          <div className="space-y-4 backdrop-blur-sm bg-white/10 p-6 rounded-lg border border-white/20">
             <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm">
               Full Stack Developer
             </div>
@@ -17,7 +26,7 @@ const Hero = () => {
             <p className="max-w-[600px] text-muted-foreground md:text-xl">
               B.Tech student with a passion for Java Development, Full Stack Web Development, and AI technology.
             </p>
-            <div className="flex flex-wrap items-center gap-2 text-muted-foreground">
+            <div className="flex items-center gap-2 text-muted-foreground">
               <MapPin className="h-4 w-4" />
               <span>Vijayawada, Andhra Pradesh, India</span>
             </div>
@@ -69,6 +78,13 @@ const Hero = () => {
                 <Mail className="h-6 w-6" />
               </a>
             </div>
+          </div>
+
+          {/* Spline 3D Model */}
+          <div className="w-full h-[400px] md:h-[500px] lg:h-[600px]">
+            <Suspense fallback={<div className="text-center text-white">Loading 3D...</div>}>
+              <Spline scene="https://prod.spline.design/hXmAL42wdfOe77Nr/scene.splinecode" />
+            </Suspense>
           </div>
         </div>
       </div>

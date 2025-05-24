@@ -98,7 +98,7 @@ const Projects = () => {
 
         <div className="mt-8 text-center">
           <Button variant="outline" className="gap-2 hover:scale-105 transition-transform duration-300" asChild>
-            <a href="https://github.com/resk-portfolio" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/Santosh-Reddy1310" target="_blank" rel="noopener noreferrer">
               <Code className="h-4 w-4" />
               View More on GitHub
             </a>
