@@ -1,37 +1,42 @@
-import React, { useEffect, useState, useRef } from 'react';
-import { Code, Database, Terminal, Globe, FileCode, BookOpen } from "lucide-react";
+import React from 'react';
+import { Code, Database, Terminal, Globe, FileCode, BookOpen, Sparkles } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const skillCategories = [
   {
     icon: <Code className="h-8 w-8" />,
     title: "Languages",
-    skills: ["Java", "JavaScript", "Python", "C", "C++"]
+    skills: ["Java", "JavaScript", "Python", "C"]
   },
   {
     icon: <Globe className="h-8 w-8" />,
     title: "Web Development",
-    skills: ["HTML", "CSS", "Bootstrap", "jQuery", "React.js", "Node.js", "Express.js", "MongoDB"]
-  },
-  {
-    icon: <Terminal className="h-8 w-8" />,
-    title: "Tools & Platforms",
-    skills: ["GitHub", "VS Code", "Postman", "Supabase", "Google Cloud", "Android Studio"]
-  },
-  {
-    icon: <Database className="h-8 w-8" />,
-    title: "Databases",
-    skills: ["SQL", "MongoDB"]
-  },
-  {
-    icon: <BookOpen className="h-8 w-8" />,
-    title: "Data Tools",
-    skills: ["Power BI", "Excel"]
+    skills: ["HTML", "CSS", "React.js", "Next.js", "Tailwind CSS", "Node.js", "Express.js"]
   },
   {
     icon: <FileCode className="h-8 w-8" />,
     title: "Libraries & Frameworks",
-    skills: ["React (useState, useEffect, props)", "Spring Boot (learning)", "Django (learning)"]
+    skills: ["React Hooks", "shadcn/ui", "Chart.js", "Spring Boot (learning)", "Django (learning)"]
+  },
+  {
+    icon: <Database className="h-8 w-8" />,
+    title: "Databases",
+    skills: ["MongoDB", "SQL", "Supabase"]
+  },
+  {
+    icon: <Terminal className="h-8 w-8" />,
+    title: "Tools & Platforms",
+    skills: ["GitHub", "Postman", "VS Code", "Render", "Vercel", "Google Cloud"]
+  },
+  {
+    icon: <BookOpen className="h-8 w-8" />,
+    title: "Data & Analysis",
+    skills: ["Power BI", "Excel", "Scikit-learn", "TensorFlow", "Streamlit"]
+  },
+  {
+    icon: <Sparkles className="h-8 w-8" />,
+    title: "AI Tools",
+    skills: ["Gemini API", "n8n", "Midjourney", "DALL·E", "ChatGPT", "Google Teachable Machine"]
   }
 ];
 
@@ -43,7 +48,7 @@ const Skills = () => {
           <h2 className="text-3xl font-bold tracking-tighter md:text-4xl mb-4">Technical Skills</h2>
           <div className="h-1 w-20 bg-primary mx-auto mb-6"></div>
           <p className="text-muted-foreground md:text-lg">
-            I've developed a diverse set of technical skills through education, projects, and self-learning.
+            I've developed a diverse set of technical skills through education, internships, and self-built real-world projects.
           </p>
         </div>
 

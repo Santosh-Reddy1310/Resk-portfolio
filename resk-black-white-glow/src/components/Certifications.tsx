@@ -1,33 +1,63 @@
 import React from 'react';
-import { Award, Check } from "lucide-react";
+import { Award, Cpu } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { motion } from "framer-motion";
 
-const certifications = [
-  { title: "Java DSA Course", issuer: "CodeSignal" },
-  { title: "Java Full Stack Short-Term Training", issuer: "Braniovision & AICTE" },
-  { title: "HTML, CSS, JavaScript for Beginners", issuer: "Coddy.tech" },
-  { title: "Python Essentials 1 & 2", issuer: "Cisco Net Academy" },
-  { title: "SQL", issuer: "HackerRank" },
-  { title: "Web Design: Beginner to Advanced", issuer: "Udemy" },
-  { title: "Full Stack MERN Internship", issuer: "AICTE & EY GDS" },
-  { title: "Google Cloud Generative AI", issuer: "EduSkills & APSCHE" },
-  { title: "Google Android Development", issuer: "EduSkills & APSCHE" },
-  { title: "Power BI for Beginners", issuer: "Simplilearn" },
-  { title: "Excel with Microsoft", issuer: "Simplilearn" },
-  { title: "Postman API Fundamentals Student Expert", issuer: "Postman" },
-  { title: "Software Engineer Intern", issuer: "HackerRank" },
-  { title: "Software Engineering Job Simulation", issuer: "Electronic Arts via Forage" },
-  { title: "Coding: Development and Advanced Engineering", issuer: "Accenture via Forage" }
+// 🚀 Internship Experience (excluding EA simulation)
+const experiences = [
+  {
+    title: "AI/ML Intern",
+    company: "Mirai School of Technology",
+    period: "Jul 2025 – Present",
+    description:
+      "Built and deployed AI projects using Google Teachable Machine, ChatGPT, and Gemini. Practiced prompt engineering and worked on real-time ML pipelines."
+  },
+  {
+    title: "AI/ML Intern",
+    company: "Edunet Foundation",
+    period: "Jun 2025 – Jul 2025",
+    description:
+      "Worked on e-waste image classification using supervised learning and transfer learning. Explored model evaluation metrics and real-world sustainability use cases."
+  },
+  {
+    title: "Frontend Developer Intern – MERN Stack",
+    company: "AICTE",
+    period: "Jan 2025 – Mar 2025",
+    description:
+      "Developed the frontend for a food delivery app using React.js, Axios, and component-based architecture. Implemented state management with hooks and React Router."
+  },
+  {
+    title: "Software Engineering Job Simulation",
+    company: "Accenture via Forage",
+    period: "Jan 2025",
+    description:
+      "Built a sample web app using agile methodologies, version control, and client-oriented design practices as part of a software development simulation."
+  },
+  {
+    title: "Google Generative AI Virtual Internship",
+    company: "Google Cloud Skills Boost",
+    period: "Oct 2024 – Dec 2024",
+    description:
+      "Completed a 120-hour internship on LLMs, Vertex AI, and image generation. Gained hands-on experience with model optimization and prompt engineering."
+  },
+  {
+    title: "Google Android Developer",
+    company: "Google Cloud Skills Boost",
+    period: "Jul 2024 – Sep 2024",
+    description:
+      "Explored Android Studio and app building fundamentals. Learned UI layouts, app lifecycle, and built basic mobile apps using Java-based Android tools."
+  }
 ];
 
-const achievements = [
-  "5-Star in Java , Python and SQL on HackerRank",
-  "Rank: 1 on HackerRank",
-  "Completed SQL , Java and Python journey's on HackerRank"
+// 🧠 Tech Stack + AI Tools
+const techStack = [
+  "React.js", "Node.js", "Express.js", "Python", "Scikit-learn",
+  "TensorFlow", "Keras", "MongoDB", "Git", "Axios",
+  "LLMs", "Prompt Engineering", "Google Teachable Machine", "ChatGPT", "Gemini",
+  "n8n", "Midjourney", "DALL·E"
 ];
 
-// Animation variant
+// ✨ Animation
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
   show: (i: number) => ({
@@ -43,21 +73,22 @@ const fadeInUp = {
 
 const Certifications = () => {
   return (
-    <section id="certifications" className="py-16 md:py-24">
+    <section id="experience" className="py-16 md:py-24">
       <div className="container px-4 md:px-6">
+        {/* Section Header */}
         <div className="text-center max-w-[800px] mx-auto mb-12">
           <h2 className="text-3xl font-bold tracking-tighter md:text-4xl mb-4">
-            Certifications & Achievements
+            Experience & Internships
           </h2>
           <div className="h-1 w-20 bg-primary mx-auto mb-6"></div>
           <p className="text-muted-foreground md:text-lg">
-            My professional certifications and achievements in the tech industry.
+            Here's a look into the internships and simulations that shaped my journey through AI, full-stack web development, and real-world systems.
           </p>
         </div>
 
-        {/* Animated certification cards */}
+        {/* Internship Cards */}
         <div className="grid gap-6 md:grid-cols-3">
-          {certifications.map((cert, i) => (
+          {experiences.map((exp, i) => (
             <motion.div
               key={i}
               variants={fadeInUp}
@@ -70,18 +101,20 @@ const Certifications = () => {
                 <CardHeader className="pb-2">
                   <div className="flex items-center gap-2">
                     <Award className="h-5 w-5 text-primary flex-shrink-0" />
-                    <CardTitle className="text-base">{cert.title}</CardTitle>
+                    <CardTitle className="text-base">{exp.title}</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-muted-foreground">Issued by {cert.issuer}</p>
+                  <p className="text-sm text-muted-foreground font-semibold">{exp.company}</p>
+                  <p className="text-xs text-muted-foreground mb-2 italic">{exp.period}</p>
+                  <p className="text-sm text-muted-foreground">{exp.description}</p>
                 </CardContent>
               </Card>
             </motion.div>
           ))}
         </div>
 
-        {/* Animated achievements section */}
+        {/* Tech Stack Section */}
         <motion.div
           className="mt-12"
           initial={{ opacity: 0, y: 20 }}
@@ -89,13 +122,17 @@ const Certifications = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h3 className="text-2xl font-bold text-center mb-6">HackerRank Achievements</h3>
-          <div className="max-w-[600px] mx-auto bg-background p-6 rounded-lg border border-border">
-            {achievements.map((achievement, i) => (
-              <div key={i} className="flex items-start gap-3 mb-4">
-                <Check className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                <span>{achievement}</span>
-              </div>
+          <h3 className="text-2xl font-bold text-center mb-6 flex justify-center items-center gap-2">
+            <Cpu className="h-5 w-5 text-primary" /> Tech Stack & AI Tools Used
+          </h3>
+          <div className="max-w-[800px] mx-auto flex flex-wrap justify-center gap-3 bg-background p-6 rounded-lg border border-border">
+            {techStack.map((tech, i) => (
+              <span
+                key={i}
+                className="bg-secondary/50 px-3 py-1 rounded-full text-sm text-foreground shadow-sm"
+              >
+                {tech}
+              </span>
             ))}
           </div>
         </motion.div>

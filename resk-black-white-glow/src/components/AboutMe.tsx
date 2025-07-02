@@ -19,30 +19,31 @@ const AboutMe = () => {
   return (
     <section id="about" className="py-16 md:py-24 bg-secondary/10">
       <div className="container px-4 md:px-6">
+        {/* Header */}
         <div className="text-center max-w-[800px] mx-auto mb-12">
           <h2 className="text-3xl font-bold tracking-tighter md:text-4xl mb-4">
             About RESK
           </h2>
           <div className="h-1 w-20 bg-primary mx-auto mb-6"></div>
           <p className="text-muted-foreground md:text-lg">
-            I'm a B.Tech student at SRK Institute of Technology with a passion for software development,
-            AI technologies, and creating innovative solutions.
+            I’m Reddy Santosh Kumar (a.k.a. RESK) — a passionate full stack developer and AI/ML enthusiast from SRK Institute of Technology. I love crafting intelligent systems, building web apps, and blending design with logic to bring powerful ideas to life.
           </p>
         </div>
 
+        {/* Grid Sections */}
         <div className="grid gap-8 md:grid-cols-3">
           {[{
             icon: <GraduationCap className="h-6 w-6 text-primary" />,
             title: "Education",
-            desc: "B.Tech student at SRK Institute of Technology with focus on computer science and engineering."
+            desc: "Final-year B.Tech student in CSE at SRKIT, Vijayawada. Specializing in Artificial Intelligence, Full Stack Development, and Data-Driven Systems."
           }, {
             icon: <Briefcase className="h-6 w-6 text-primary" />,
             title: "Career Focus",
-            desc: "Open to exploring roles in software development, AI, and technology industries, with a preference for full-stack development."
+            desc: "Aiming for roles in AI/ML, GenAI Engineering, and Full Stack Web Development. I enjoy solving real-world problems using clean UI and smart backend logic."
           }, {
             icon: <Heart className="h-6 w-6 text-primary" />,
             title: "Interests",
-            desc: "Java Development, Full Stack Web Development, Data Structures and Algorithms (DSA), AI technology, and Animation Video Creation."
+            desc: "Java Development, Next.js + Tailwind UI, LLM Prompt Engineering, n8n Automation, DALL·E & Midjourney Creation, Tech Blogging, and Dev Memes."
           }].map((item, i) => (
             <motion.div
               key={i}
@@ -62,6 +63,7 @@ const AboutMe = () => {
           ))}
         </div>
 
+        {/* Side Involvements */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -71,9 +73,10 @@ const AboutMe = () => {
         >
           <h3 className="text-xl font-semibold mb-4">Other Roles & Involvements</h3>
           <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
-            <li>LetsUpgrade Student Ambassador (March 2025)</li>
-            <li>Internshala Student Partner (Promoting on LinkedIn)</li>
-            <li>Actively participates in tech events and paper presentations</li>
+            <li>LetsUpgrade Student Ambassador (Mar 2025)</li>
+            <li>Internshala Student Partner — promoted internships on LinkedIn</li>
+            <li>Presented papers and participated in tech events & meetups</li>
+            <li>Creating dev content, tutorials, and short-form tech videos</li>
           </ul>
         </motion.div>
       </div>

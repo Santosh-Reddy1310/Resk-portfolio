@@ -7,7 +7,6 @@ const Navbar = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
     document.documentElement.classList.toggle('dark');
@@ -17,30 +16,29 @@ const Navbar = () => {
     <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container flex items-center justify-between h-16 px-4 md:px-6">
         <div className="flex items-center">
-          <a href="/" className="flex items-center">
-            <span className="text-2xl font-bold tracking-tight">RESK</span>
-          </a>
+          <a href="/" className="text-2xl font-bold tracking-tight">RESK</a>
         </div>
 
+        {/* Desktop Nav */}
         <div className="hidden md:flex md:items-center md:gap-6">
-          <a href="#about" className="text-sm font-medium hover:text-primary hover:scale-105 transform transition-all duration-200">
-            About
-          </a>
-          <a href="#skills" className="text-sm font-medium hover:text-primary hover:scale-105 transform transition-all duration-200">
-            Skills
-          </a>
-          <a href="#projects" className="text-sm font-medium hover:text-primary hover:scale-105 transform transition-all duration-200">
-            Projects
-          </a>
-          <a href="#certifications" className="text-sm font-medium hover:text-primary hover:scale-105 transform transition-all duration-200">
-            Certifications
-          </a>
-          <a href="mailto:reddysantosh1310@gmail.com" className="text-sm font-medium hover:text-primary hover:scale-105 transform transition-all duration-200">
+          {["about", "skills", "projects", "experience"].map((item, i) => (
+            <a
+              key={i}
+              href={`#${item}`}
+              className="text-sm font-medium hover:text-primary hover:scale-105 transition-all"
+            >
+              {item.charAt(0).toUpperCase() + item.slice(1)}
+            </a>
+          ))}
+          <a
+            href="mailto:reddysantosh1310@gmail.com"
+            className="text-sm font-medium hover:text-primary hover:scale-105 transition-all"
+          >
             Contact
           </a>
           <Button
             variant="outline"
-            className="ml-2 gap-2 hover:scale-105 transform transition-all duration-200"
+            className="ml-2 gap-2 hover:scale-105 transition-all"
             asChild
           >
             <a
@@ -55,18 +53,19 @@ const Navbar = () => {
             variant="ghost"
             size="icon"
             onClick={toggleDarkMode}
-            className="ml-2 transition-all duration-300 transform hover:scale-110"
+            className="ml-2 hover:scale-110 transition-all"
           >
             {isDarkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
           </Button>
         </div>
 
+        {/* Mobile Icons */}
         <div className="flex md:hidden items-center gap-2">
           <Button
             variant="ghost"
             size="icon"
             onClick={toggleDarkMode}
-            className="transition-all duration-300 transform hover:scale-110"
+            className="hover:scale-110 transition-all"
           >
             {isDarkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
           </Button>
@@ -76,28 +75,30 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu with Slide-In Animation */}
+      {/* Mobile Menu Overlay */}
       {isMenuOpen && (
-        <div className="md:hidden bg-background border-b border-border transform translate-x-full transition-all duration-500 ease-in-out">
-          <div className="container py-4 px-4 flex flex-col space-y-4">
-            <a href="#about" className="text-sm font-medium py-2 hover:text-primary hover:scale-105 transform transition-all duration-200" onClick={toggleMenu}>
-              About
-            </a>
-            <a href="#skills" className="text-sm font-medium py-2 hover:text-primary hover:scale-105 transform transition-all duration-200" onClick={toggleMenu}>
-              Skills
-            </a>
-            <a href="#projects" className="text-sm font-medium py-2 hover:text-primary hover:scale-105 transform transition-all duration-200" onClick={toggleMenu}>
-              Projects
-            </a>
-            <a href="#certifications" className="text-sm font-medium py-2 hover:text-primary hover:scale-105 transform transition-all duration-200" onClick={toggleMenu}>
-              Certifications
-            </a>
-            <a href="mailto:reddysantosh1310@gmail.com" className="text-sm font-medium py-2 hover:text-primary hover:scale-105 transform transition-all duration-200" onClick={toggleMenu}>
+        <div className="md:hidden absolute top-16 left-0 w-full bg-background border-t border-border z-40 shadow-md animate-slideDown">
+          <div className="container py-6 px-4 flex flex-col space-y-4">
+            {["about", "skills", "projects", "experience"].map((item, i) => (
+              <a
+                key={i}
+                href={`#${item}`}
+                className="text-sm font-medium py-2 hover:text-primary hover:scale-105 transition-all"
+                onClick={toggleMenu}
+              >
+                {item.charAt(0).toUpperCase() + item.slice(1)}
+              </a>
+            ))}
+            <a
+              href="mailto:reddysantosh1310@gmail.com"
+              className="text-sm font-medium py-2 hover:text-primary hover:scale-105 transition-all"
+              onClick={toggleMenu}
+            >
               Contact
             </a>
             <Button
               variant="outline"
-              className="w-full justify-center gap-2 hover:scale-105 transform transition-all duration-200"
+              className="w-full justify-center gap-2 hover:scale-105 transition-all"
               asChild
             >
               <a
