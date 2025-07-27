@@ -10,51 +10,60 @@ const experiences = [
     company: "Mirai School of Technology",
     period: "Jul 2025 – Present",
     description:
-      "Built and deployed AI projects using Google Teachable Machine, ChatGPT, and Gemini. Practiced prompt engineering and worked on real-time ML pipelines."
+      "Architected real-time AI applications using Google Teachable Machine, ChatGPT, and Gemini API. Specialized in prompt engineering and optimized LLM output quality by 25%. Deployed ML pipelines for live use cases."
   },
   {
     title: "AI/ML Intern",
     company: "Edunet Foundation",
     period: "Jun 2025 – Jul 2025",
     description:
-      "Worked on e-waste image classification using supervised learning and transfer learning. Explored model evaluation metrics and real-world sustainability use cases."
+      "Built image classifiers for e-waste detection using TensorFlow, CNN, and transfer learning. Achieved 92% accuracy on 10K+ dataset and deployed end-to-end pipelines from preprocessing to evaluation."
   },
   {
-    title: "Frontend Developer Intern – MERN Stack",
-    company: "AICTE",
+    title: "Frontend Developer Intern",
+    company: "AICTE (Remote)",
     period: "Jan 2025 – Mar 2025",
     description:
-      "Developed the frontend for a food delivery app using React.js, Axios, and component-based architecture. Implemented state management with hooks and React Router."
+      "Developed a responsive food delivery app UI using React.js, Tailwind CSS, and Axios. Implemented dynamic routing, React Hooks, and state management for seamless UX."
   },
   {
     title: "Software Engineering Job Simulation",
-    company: "Accenture via Forage",
+    company: "Accenture (via Forage)",
     period: "Jan 2025",
     description:
-      "Built a sample web app using agile methodologies, version control, and client-oriented design practices as part of a software development simulation."
+      "Completed agile software development simulation. Practiced Git version control, client-first design, and rapid prototyping for business use cases."
   },
   {
-    title: "Google Generative AI Virtual Internship",
+    title: "Generative AI Virtual Internship",
     company: "Google Cloud Skills Boost",
     period: "Oct 2024 – Dec 2024",
     description:
-      "Completed a 120-hour internship on LLMs, Vertex AI, and image generation. Gained hands-on experience with model optimization and prompt engineering."
+      "Completed 120-hour training on LLMs, Vertex AI, and GenAI workflows. Focused on image generation, model tuning, and cloud-based deployment techniques."
   },
   {
-    title: "Google Android Developer",
+    title: "Android Developer Internship",
     company: "Google Cloud Skills Boost",
     period: "Jul 2024 – Sep 2024",
     description:
-      "Explored Android Studio and app building fundamentals. Learned UI layouts, app lifecycle, and built basic mobile apps using Java-based Android tools."
+      "Built native Android apps using Kotlin and Android Studio. Learned layout design, component lifecycles, and mobile dev best practices."
   }
 ];
 
 // 🧠 Tech Stack + AI Tools
 const techStack = [
-  "React.js", "Node.js", "Express.js", "Python", "Scikit-learn",
-  "TensorFlow", "Keras", "MongoDB", "Git", "Axios",
-  "LLMs", "Prompt Engineering", "Google Teachable Machine", "ChatGPT", "Gemini",
-  "n8n", "Midjourney", "DALL·E"
+  // 🧠 Core AI/ML
+  "Python", "TensorFlow", "Keras", "Scikit-learn", "OpenCV",
+  "CNN", "Transfer Learning", "Supervised Learning",
+
+  // 💻 Full Stack Dev
+  "React.js", "Node.js", "Express.js", "MongoDB", "Axios",
+
+  // 🧠 LLM & GenAI Tools
+  "Gemini API", "ChatGPT", "Prompt Engineering", "LLMs",
+  "Google Teachable Machine", "n8n", "DALL·E", "Midjourney",
+
+  // 🧰 Dev Tools
+  "Git", "Postman", "Jupyter", "Android Studio"
 ];
 
 // ✨ Animation

@@ -5,87 +5,97 @@ import { Button } from "@/components/ui/button";
 
 const projects = [
   {
-    title: "DashBoard UI",
-    description: "A sleek, modern dashboard UI built with responsive layout and clean component structure.",
-    tech: ["React", "Tailwind CSS"],
+    title: "Roastume – AI Resume Critic",
+    description:
+      "An AI-powered resume reviewer with brutal/funny/coach tones, ATS score analysis, and LLM-based resume improvement.",
+    tech: ["React.js", "FastAPI", "Python", "Gemini API", "Tailwind CSS"],
     links: {
-      github: "https://github.com/Santosh-Reddy1310/Dashboard-UI",
-      demo: "https://dash-ui-ruby.vercel.app/"
-    }
+      github: "https://github.com/Santosh-Reddy1310/Roastume",
+      demo: "https://roastume.vercel.app/",
+    },
   },
   {
-    title: "RESK Chatbot Assistant",
-    description: "A real-time chatbot built using React and Supabase with Google Auth integration.",
-    tech: ["Nextjs", "Supabase", "Google Auth"],
+    title: "MediScan.AI – PDF Health Analyzer",
+    description:
+      "A medical report analyzer that reads PDFs and predicts diseases using TensorFlow models and NLP techniques.",
+    tech: ["Streamlit", "TensorFlow", "Python", "Regex", "LLM"],
     links: {
-      github: "https://github.com/Santosh-Reddy1310/RESK",
-      demo: "https://resk-chatbot.vercel.app/"
-    }
+      github: "https://github.com/Santosh-Reddy1310/mediscan.ai",
+      demo: "https://med-scan-ai.streamlit.app/",
+    },
   },
   {
-    title: "SRK College Website Redesign",
-    description: "Redesigned SRKIT’s college website with improved structure, mobile responsiveness, and modern UI.",
-    tech: ["HTML", "CSS", "JavaScript"],
+    title: "TeslaPulse.AI – Stock Analytics Dashboard",
+    description:
+      "Real-time dashboard with stock trends, AI-driven sentiment analysis, price forecasting & Gemini chatbot.",
+    tech: ["Next.js", "FastAPI", "WebSockets", "Chart.js", "Gemini API"],
     links: {
-      github: "https://github.com/Santosh-Reddy1310/SRKIT-Website",
-      demo: "https://srkit-innovate-hub.vercel.app/"
-    }
+      github: "https://github.com/Santosh-Reddy1310/Tesla-Pulse",
+      demo: "https://tesla-pulse.vercel.app/",
+    },
   },
   {
-    title: "SaaS Portfolio",
-    description: "A SaaS-inspired portfolio site showcasing skills, tech stack, and personal projects with a professional feel.",
-    tech: ["Next.js", "Tailwind CSS"],
+    title: "AgriScope – Crop Recommender",
+    description:
+      "A region-specific ML app recommending crops based on weather and statistical features, powered by Gemini API.",
+    tech: ["Streamlit", "Python", "Gemini API", "Pandas", "Statistical Analysis"],
     links: {
-      github: "https://github.com/Santosh-Reddy1310/Saas-Portfolio",
-      demo: "#"
-    }
+      github: "https://github.com/Santosh-Reddy1310/AgriScope",
+      demo: "https://agriscope.streamlit.app/",
+    },
   },
   {
-    title: "Simple Landing Portfolio Page",
-    description: "A minimal personal portfolio landing page using Tailwind CSS and React.",
-    tech: ["React", "Tailwind CSS"],
+    title: "E-Waste Classifier",
+    description:
+      "A deep learning model using CNN and OpenCV to detect and classify electronic waste images from 10,000+ dataset.",
+    tech: ["TensorFlow", "Python", "OpenCV", "CNN", "Model Deployment"],
     links: {
-      github: "https://github.com/Santosh-Reddy1310/Projects/tree/main/Project%20-%2018%20Simple%20Landing",
-      demo: "https://re-sk.netlify.app/"
-    }
+      github: "https://github.com/Santosh-Reddy1310/Ewaste-Classifier",
+      demo: "#",
+    },
+  },
+  {
+    title: "Breast Cancer Prediction App",
+    description:
+      "A diagnostic app that predicts breast cancer based on user inputs using a trained ML model (scikit-learn).",
+    tech: ["Python", "Scikit-learn", "Streamlit", "ML Model"],
+    links: {
+      github: "https://github.com/Santosh-Reddy1310/breast-cancer-predictor",
+      demo: "https://predictbc.streamlit.app/",
+    },
   },
   {
     title: "Gen AI Search Engine",
-    description: "LLM-powered search interface using Gemini 1.5 Flash for intelligent and contextual queries.",
+    description:
+      "A semantic LLM-powered search experience that uses Gemini 1.5 Flash for contextual query resolution.",
     tech: ["Next.js", "Gemini API", "FastAPI"],
     links: {
       github: "https://github.com/Santosh-Reddy1310/GenAI-Agent",
-      demo: "https://resk-genai-app.streamlit.app/"
-    }
+      demo: "https://resk-genai-app.streamlit.app/",
+    },
   },
   {
-    title: "Breast Cancer Prediction",
-    description: "A Streamlit web app that predicts breast cancer from medical input data using a trained ML model.",
-    tech: ["Python", "Streamlit", "Scikit-learn"],
+    title: "RESK Chatbot Assistant",
+    description:
+      "Real-time chatbot app with Supabase backend, Google Auth integration, and a minimal UX design.",
+    tech: ["Next.js", "Supabase", "Google Auth", "Tailwind CSS"],
     links: {
-      github: "https://github.com/Santosh-Reddy1310/breast-cancer-predictor",
-      demo: "https://predictbc.streamlit.app/"
-    }
+      github: "https://github.com/Santosh-Reddy1310/RESK",
+      demo: "https://resk-chatbot.vercel.app/",
+    },
   },
   {
-    title: "MediScan.AI",
-    description: "AI-powered medical report analyzer that reads PDFs and predicts diseases using ML/DL models.",
-    tech: ["Streamlit", "TensorFlow", "Regex"],
+    title: "Dashboard UI System",
+    description:
+      "A modern responsive dashboard with clean UI components — suitable for admin panels or SaaS interfaces.",
+    tech: ["React", "Tailwind CSS", "UI/UX"],
     links: {
-      github: "https://github.com/Santosh-Reddy1310/mediscan.ai",
-      demo: "https://med-scan-ai.streamlit.app/"
-    }
-  },
-  {
-    title: "TeslaPulse.AI",
-    description: "A real-time stock dashboard for Tesla with AI news insights, stock prediction, and company comparison.",
-    tech: ["Next.js", "FastAPI", "Chart.js", "Gemini API"],
-    links: {
-      github: "https://github.com/Santosh-Reddy1310/Tesla-Pulse",
-      demo: "https://tesla-pulse.vercel.app/"
-    }
+      github: "https://github.com/Santosh-Reddy1310/Dashboard-UI",
+      demo: "https://dash-ui-ruby.vercel.app/",
+    },
   },
 ];
+
 
 const Projects = () => {
   return (

@@ -26,25 +26,29 @@ const AboutMe = () => {
           </h2>
           <div className="h-1 w-20 bg-primary mx-auto mb-6"></div>
           <p className="text-muted-foreground md:text-lg">
-            I’m Reddy Santosh Kumar (a.k.a. RESK) — a passionate full stack developer and AI/ML enthusiast from SRK Institute of Technology. I love crafting intelligent systems, building web apps, and blending design with logic to bring powerful ideas to life.
+            I’m <strong>Reddy Santosh Kumar</strong> (aka <strong>RESK</strong>) — a full stack developer and AI/ML engineer-in-the-making, building tools that blend code, creativity, and cognition. I love solving real-world problems with AI systems, data pipelines, and interfaces that just *feel right*.
           </p>
         </div>
 
         {/* Grid Sections */}
         <div className="grid gap-8 md:grid-cols-3">
-          {[{
-            icon: <GraduationCap className="h-6 w-6 text-primary" />,
-            title: "Education",
-            desc: "Final-year B.Tech student in CSE at SRKIT, Vijayawada. Specializing in Artificial Intelligence, Full Stack Development, and Data-Driven Systems."
-          }, {
-            icon: <Briefcase className="h-6 w-6 text-primary" />,
-            title: "Career Focus",
-            desc: "Aiming for roles in AI/ML, GenAI Engineering, and Full Stack Web Development. I enjoy solving real-world problems using clean UI and smart backend logic."
-          }, {
-            icon: <Heart className="h-6 w-6 text-primary" />,
-            title: "Interests",
-            desc: "Java Development, Next.js + Tailwind UI, LLM Prompt Engineering, n8n Automation, DALL·E & Midjourney Creation, Tech Blogging, and Dev Memes."
-          }].map((item, i) => (
+          {[
+            {
+              icon: <GraduationCap className="h-6 w-6 text-primary" />,
+              title: "Education",
+              desc: "B.Tech in Computer Science @ SRK Institute of Technology (Graduating 2026). Specializing in Machine Learning, Data Structures, and Software Engineering — GPA: 8.6"
+            },
+            {
+              icon: <Briefcase className="h-6 w-6 text-primary" />,
+              title: "Experience",
+              desc: "AI Intern at Mirai School (GenAI projects, LLM prompt engineering), AI/ML Intern at Edunet Foundation (TensorFlow, Transfer Learning), Frontend Dev Intern @ AICTE, and Google Cloud Skills Intern (Vertex AI & Android)."
+            },
+            {
+              icon: <Heart className="h-6 w-6 text-primary" />,
+              title: "Passions",
+              desc: "LLMs & Generative AI, FastAPI backends, building with n8n, UI storytelling with Tailwind + React, open-source learning, and creating dev memes that slap."
+            }
+          ].map((item, i) => (
             <motion.div
               key={i}
               custom={i}
@@ -71,13 +75,6 @@ const AboutMe = () => {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="mt-12 bg-background p-6 rounded-lg border border-border shadow-sm"
         >
-          <h3 className="text-xl font-semibold mb-4">Other Roles & Involvements</h3>
-          <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
-            <li>LetsUpgrade Student Ambassador (Mar 2025)</li>
-            <li>Internshala Student Partner — promoted internships on LinkedIn</li>
-            <li>Presented papers and participated in tech events & meetups</li>
-            <li>Creating dev content, tutorials, and short-form tech videos</li>
-          </ul>
         </motion.div>
       </div>
     </section>
