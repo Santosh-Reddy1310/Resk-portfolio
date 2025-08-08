@@ -5,6 +5,16 @@ import { Button } from "@/components/ui/button";
 
 const projects = [
   {
+    title: "PaperProof – AI Research Paper Generator",
+    description:
+      "Generates fully structured, APA-style research papers from any topic in seconds using Gemini 1.5 Flash, with parallel section processing, automatic citations, and real-time progress tracking.",
+    tech: ["Streamlit", "Python", "Gemini API", "Pandas", "Parallel Processing"],
+    links: {
+      github: "https://github.com/Santosh-Reddy1310/paperproof",
+      demo: "https://paper-proof.onrender.com/",
+    },
+  },
+  {
     title: "Roastume – AI Resume Critic",
     description:
       "An AI-powered resume reviewer with brutal/funny/coach tones, ATS score analysis, and LLM-based resume improvement.",
@@ -12,16 +22,6 @@ const projects = [
     links: {
       github: "https://github.com/Santosh-Reddy1310/Roastume",
       demo: "https://roastume.vercel.app/",
-    },
-  },
-  {
-    title: "MediScan.AI – PDF Health Analyzer",
-    description:
-      "A medical report analyzer that reads PDFs and predicts diseases using TensorFlow models and NLP techniques.",
-    tech: ["Streamlit", "TensorFlow", "Python", "Regex", "LLM"],
-    links: {
-      github: "https://github.com/Santosh-Reddy1310/mediscan.ai",
-      demo: "https://med-scan-ai.streamlit.app/",
     },
   },
   {
@@ -35,6 +35,26 @@ const projects = [
     },
   },
   {
+    title: "MediScan.AI – PDF Health Analyzer",
+    description:
+      "A medical report analyzer that reads PDFs and predicts diseases using TensorFlow models and NLP techniques.",
+    tech: ["Streamlit", "TensorFlow", "Python", "Regex", "LLM"],
+    links: {
+      github: "https://github.com/Santosh-Reddy1310/mediscan.ai",
+      demo: "https://med-scan-ai.streamlit.app/",
+    },
+  },
+  {
+    title: "Gen AI Search Engine",
+    description:
+      "A semantic LLM-powered search experience that uses Gemini 1.5 Flash for contextual query resolution.",
+    tech: ["Next.js", "Gemini API", "FastAPI"],
+    links: {
+      github: "https://github.com/Santosh-Reddy1310/GenAI-Agent",
+      demo: "https://resk-genai-app.streamlit.app/",
+    },
+  },
+  {
     title: "AgriScope – Crop Recommender",
     description:
       "A region-specific ML app recommending crops based on weather and statistical features, powered by Gemini API.",
@@ -42,6 +62,66 @@ const projects = [
     links: {
       github: "https://github.com/Santosh-Reddy1310/AgriScope",
       demo: "https://agriscope.streamlit.app/",
+    },
+  },
+  {
+    title: "AutoML – Automated Data to ML Pipeline",
+    description:
+      "A Streamlit app that transforms datasets into ready-to-use ML models with minimal user input, using data cleaning, preprocessing, and model training automation.",
+    tech: ["Streamlit", "Python", "Pandas", "Scikit-learn"],
+    links: {
+      github: "https://github.com/Santosh-Reddy1310/AutoML-Flow",
+      demo: "https://automl-flow.streamlit.app/",
+    },
+  },
+  {
+    title: "RESK Chatbot Assistant",
+    description:
+      "Real-time chatbot app with Supabase backend, Google Auth integration, and a minimal UX design.",
+    tech: ["Next.js", "Supabase", "Google Auth", "Tailwind CSS"],
+    links: {
+      github: "https://github.com/Santosh-Reddy1310/RESK",
+      demo: "https://resk-chatbot.vercel.app/",
+    },
+  },
+  {
+    title: "SRK College Website Redesign",
+    description:
+      "A modern redesign of SRK Institute's website with an updated, responsive UI/UX and better navigation.",
+    tech: ["Next.js", "Tailwind CSS", "UI/UX"],
+    links: {
+      github: "#",
+      demo: "https://srkit-innovate-hub.vercel.app/",
+    },
+  },
+  {
+    title: "SaaS Portfolio",
+    description:
+      "A professional SaaS-style portfolio website to showcase projects and achievements.",
+    tech: ["Next.js", "Tailwind CSS", "UI/UX"],
+    links: {
+      github: "#",
+      demo: "https://resk-portfolio.vercel.app/",
+    },
+  },
+  {
+    title: "Simple Landing Portfolio Page",
+    description:
+      "A minimal personal landing page built with responsive design principles.",
+    tech: ["HTML", "CSS", "JavaScript"],
+    links: {
+      github: "#",
+      demo: "https://re-sk.netlify.app/",
+    },
+  },
+  {
+    title: "Dashboard UI System",
+    description:
+      "A modern responsive dashboard with clean UI components — suitable for admin panels or SaaS interfaces.",
+    tech: ["React", "Tailwind CSS", "UI/UX"],
+    links: {
+      github: "https://github.com/Santosh-Reddy1310/Dashboard-UI",
+      demo: "https://dash-ui-ruby.vercel.app/",
     },
   },
   {
@@ -64,37 +144,8 @@ const projects = [
       demo: "https://predictbc.streamlit.app/",
     },
   },
-  {
-    title: "Gen AI Search Engine",
-    description:
-      "A semantic LLM-powered search experience that uses Gemini 1.5 Flash for contextual query resolution.",
-    tech: ["Next.js", "Gemini API", "FastAPI"],
-    links: {
-      github: "https://github.com/Santosh-Reddy1310/GenAI-Agent",
-      demo: "https://resk-genai-app.streamlit.app/",
-    },
-  },
-  {
-    title: "RESK Chatbot Assistant",
-    description:
-      "Real-time chatbot app with Supabase backend, Google Auth integration, and a minimal UX design.",
-    tech: ["Next.js", "Supabase", "Google Auth", "Tailwind CSS"],
-    links: {
-      github: "https://github.com/Santosh-Reddy1310/RESK",
-      demo: "https://resk-chatbot.vercel.app/",
-    },
-  },
-  {
-    title: "Dashboard UI System",
-    description:
-      "A modern responsive dashboard with clean UI components — suitable for admin panels or SaaS interfaces.",
-    tech: ["React", "Tailwind CSS", "UI/UX"],
-    links: {
-      github: "https://github.com/Santosh-Reddy1310/Dashboard-UI",
-      demo: "https://dash-ui-ruby.vercel.app/",
-    },
-  },
 ];
+
 
 
 const Projects = () => {
