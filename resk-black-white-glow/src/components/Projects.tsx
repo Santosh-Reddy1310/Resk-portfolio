@@ -45,6 +45,17 @@ const projects = [
     },
   },
   {
+    title: "CarVerse – Daily Car Facts & Explorer",
+    description:
+      "An interactive Streamlit dashboard that combines used car market data with AI-powered insights, offering daily car facts, Car of the Day, instant plain-English explanations of car specs, and market trend visualizations.",
+    tech: ["Streamlit", "Python", "Pandas", "Plotly", "Google Gemini API"],
+    links: {
+      github: "https://github.com/Santosh-Reddy1310/carverse",
+      demo: "https://carverse.streamlit.app/",
+    },
+  }
+,
+  {
     title: "Gen AI Search Engine",
     description:
       "A semantic LLM-powered search experience that uses Gemini 1.5 Flash for contextual query resolution.",
@@ -144,16 +155,6 @@ const projects = [
       demo: "https://predictbc.streamlit.app/",
     },
   },
-  {
-  title: "CarVerse – Daily Car Facts & Explorer",
-  description:
-    "An interactive Streamlit dashboard that combines used car market data with AI-powered insights, offering daily car facts, Car of the Day, instant plain-English explanations of car specs, and market trend visualizations.",
-  tech: ["Streamlit", "Python", "Pandas", "Plotly", "Google Gemini API"],
-  links: {
-    github: "https://github.com/Santosh-Reddy1310/carverse",
-    demo: "https://carverse.streamlit.app/",
-  },
-}
 
 ];
 
