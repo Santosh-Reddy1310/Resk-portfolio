@@ -15,6 +15,17 @@ const projects = [
     },
   },
   {
+    title: "InsightSphere – AI-Powered Agriculture Insights Dashboard",
+    description:
+      "An interactive, AI-powered storytelling dashboard built during a hackathon that transforms raw agriculture data (weather + crop markets) into actionable insights. Features include real-time charts, Gemini-generated recommendation cards, anomaly detection, and gamified UX with animations and KPIs.",
+    tech: ["Next.js", "Tailwind CSS", "FastAPI", "Recharts", "Framer Motion", "Gemini API"],
+    links: {
+      github: "https://github.com/Santosh-Reddy1310/dashboard-agroml",
+      demo: "https://insightsphere-azure.vercel.app/",
+    },
+  },
+
+  {
     title: "Roastume – AI Resume Critic",
     description:
       "An AI-powered resume reviewer with brutal/funny/coach tones, ATS score analysis, and LLM-based resume improvement.",
@@ -54,7 +65,7 @@ const projects = [
       demo: "https://carverse.streamlit.app/",
     },
   }
-,
+  ,
   {
     title: "Gen AI Search Engine",
     description:
