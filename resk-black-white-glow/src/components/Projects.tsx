@@ -5,6 +5,17 @@ import { Button } from "@/components/ui/button";
 
 const projects = [
   {
+    title: "QBot – Hybrid Quantum AI Chatbot",
+    description:
+      "A next-gen AI chatbot that combines classical Large Language Models with quantum computing algorithms. Enhances responses using quantum principles like superposition, entanglement, and true randomness, with interactive circuit visualizations and multi-provider LLM support.",
+    tech: ["Python", "Streamlit", "Qiskit", "OpenRouter API", "Google Gemini API", "Groq API", "Quantum Algorithms"],
+    links: {
+      github: "https://github.com/Santosh-Reddy1310/HQAI-Chatbot",
+      demo: "https://qbot-ai.streamlit.app/",
+    },
+  },
+
+  {
     title: "PaperProof – AI Research Paper Generator",
     description:
       "Generates fully structured, APA-style research papers from any topic in seconds using Gemini 1.5 Flash, with parallel section processing, automatic citations, and real-time progress tracking.",
