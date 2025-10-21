@@ -15,7 +15,7 @@ const projects = [
     tierLabel: "🌟 Most Advanced",
     links: {
       github: "https://github.com/Santosh-Reddy1310/Daily_Planner_Crew_AI",
-      demo: "#",
+      demo: "https://github.com/Santosh-Reddy1310/Daily_Planner_Crew_AI",
     },
   },
   {
