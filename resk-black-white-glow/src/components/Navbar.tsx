@@ -42,7 +42,7 @@ const Navbar = () => {
             asChild
           >
             <a
-              href="https://drive.google.com/file/d/1z7nAAAez48BEXLDMEv8mA4A3O4SAfujJ/view?usp=sharing"
+              href="https://drive.google.com/file/d/1Rv4wERLV1SA1Log7Xyc7nqVWnBQBrGQv/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -102,7 +102,7 @@ const Navbar = () => {
               asChild
             >
               <a
-                href="https://drive.google.com/file/d/1z7nAAAez48BEXLDMEv8mA4A3O4SAfujJ/view?usp=sharing"
+                href="https://drive.google.com/file/d/1Rv4wERLV1SA1Log7Xyc7nqVWnBQBrGQv/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
               >

@@ -33,7 +33,7 @@ const Footer = () => {
               <Linkedin className="h-5 w-5" />
             </a>
             <a
-              href="https://www.instagram.com/syntax_error_sk/"
+              href="https://www.instagram.com/klyn.am/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-foreground transition-colors"

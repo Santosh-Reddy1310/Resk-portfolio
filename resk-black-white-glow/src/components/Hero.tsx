@@ -82,7 +82,7 @@ const Hero = () => {
               <Linkedin className="h-6 w-6" />
             </a>
             <a
-              href="https://www.instagram.com/syntax_error_sk/"
+              href="https://www.instagram.com/klyn.am/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-foreground transition-colors"
