@@ -7,6 +7,18 @@ import { Badge } from "@/components/ui/badge";
 const projects = [
   // 🌟 Tier 1: Most Advanced & Impactful Projects
   {
+    title: "Healthcare Sustainability AI Agent System",
+    description:
+      "A modular AI system composed of specialized agents (Data Collector, Analysis, Report Generator, Intervention Planner) to automate multi-facility hospital sustainability analysis. Provides data normalization, trend detection, anomaly identification, and actionable sustainability interventions through rich narrative and visual reports.",
+    tech: ["Python", "CrewAI", "pandas", "Streamlit", "Matplotlib", "Multi-Agent AI", "LLM Integration"],
+    tier: "advanced",
+    tierLabel: "🌟 Most Advanced",
+    links: {
+      github: "https://github.com/Santosh-Reddy1310/Hospi-Sus-Agent",
+      demo: "https://ai-hospi-dashboard.streamlit.app/",
+    },
+  },
+  {
     title: "AI Daily Planner Crew – Multi-Agent Task Optimizer",
     description:
       "A collaborative AI system using three specialized agents (Task Analyzer, Time Planner, Motivator) to transform chaotic to-do lists into optimized, motivating daily schedules. Features smart scheduling, energy-level optimization, and motivational support with Groq-powered LLM integration.",
