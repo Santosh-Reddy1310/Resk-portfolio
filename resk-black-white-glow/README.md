@@ -1,73 +1,67 @@
-# Welcome to your Lovable project
+# RESK Portfolio
 
-## Project info
+> Full stack developer and AI builder crafting multi-agent systems, intelligent dashboards, and human-friendly interfaces.
 
-**URL**: https://lovable.dev/projects/ac186150-e0a0-4cf8-888d-6526d1a46e67
+## Live Experience
+- Portfolio: https://resk-portfolio.vercel.app/
+- Resume: https://drive.google.com/file/d/1Rv4wERLV1SA1Log7Xyc7nqVWnBQBrGQv/view?usp=sharing
+- GitHub: https://github.com/Santosh-Reddy1310
+- LinkedIn: https://www.linkedin.com/in/reddy-santosh-kumar-a5b9622a2/
+- Instagram: https://www.instagram.com/klyn.am/
+- Email: reddysantosh1310@gmail.com
 
-## How can I edit this code?
+## Snapshot
+- Location: Vijayawada, Andhra Pradesh, India
+- Projects showcased: 19 (4 flagship AI systems, 3 full-stack AI apps, 4 AI/ML tools, 3 data analytics products, 2 web apps, 3 UI/UX designs)
+- Core focus: AI-driven automation, real-time analytics, and polished product experiences
+- Tech stack: Vite, React, TypeScript, Tailwind CSS, shadcn/ui, CrewAI, FastAPI, Streamlit, TensorFlow, Gemini API
 
-There are several ways of editing your application.
+## Flagship Projects
+- Healthcare Sustainability AI Agent System – Modular multi-agent CrewAI workflow for hospital sustainability audits with narrative reporting and intervention planning.
+- AI Daily Planner Crew – Collaborative agent team (analyzer, planner, motivator) that transforms to-do chaos into energy-aware schedules powered by Groq LLMs.
+- QBot – Quantum-classical hybrid chatbot blending Qiskit simulations with multi-provider LLM routing and interactive circuit visuals.
+- InsightSphere – Hackathon-built agriculture intelligence dashboard with Gemini-driven storytelling, anomaly detection, and gamified insights.
 
-**Use Lovable**
+## Additional Highlights
+- TeslaPulse.AI: Real-time Tesla stock analytics with FastAPI websockets, sentiment analysis, and embedded Gemini assistant.
+- PaperProof: Gemini 1.5 Flash powered generator for structured APA-style research papers with live progress tracking.
+- Roastume: Tone-aware resume critic delivering ATS scores, brutal roast mode, and actionable rewrite suggestions.
+- MediScan.AI: TensorFlow PDF report interpreter predicting disease likelihoods with NLP-driven summaries.
+- CarVerse: Streamlit daily car insights hub merging dataset exploration with instant AI explainers.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/ac186150-e0a0-4cf8-888d-6526d1a46e67) and start prompting.
+## Experience Timeline
+- Mirai School of Technology (AI/ML Intern, Jul 2025 – Present): Launched real-time GenAI apps, tuned LLM prompts for 25 percent quality gains, shipped production-ready ML pipelines.
+- Edunet Foundation (AI/ML Intern, Jun 2025 – Jul 2025): Built e-waste CNN classifier hitting 92 percent accuracy across 10K images and automated end-to-end training workflows.
+- AICTE (Frontend Developer Intern, Jan 2025 – Mar 2025): Delivered responsive food delivery interface with React, Tailwind CSS, hooks, and API integrations.
+- Accenture via Forage (Software Engineering Simulation, Jan 2025): Practiced agile sprints, Git workflow, and client-first prototyping.
+- Google Cloud Skills Boost (Generative AI Intern, Oct 2024 – Dec 2024): Completed 120-hour Vertex AI labs on tuning, deployment, and multimodal prompts.
+- Google Cloud Skills Boost (Android Developer Intern, Jul 2024 – Sep 2024): Shipped native Kotlin apps, refining mobile UI patterns and lifecycle management.
 
-Changes made via Lovable will be committed automatically to this repo.
+## Technical Toolkit
+- Languages: Python, JavaScript, TypeScript, SQL, C++, Java
+- AI/ML: TensorFlow, scikit-learn, Pandas, NumPy, OpenCV, CNN, Transfer Learning, LLM prompt engineering
+- Web & App: React, Next.js, FastAPI, Streamlit, Node.js, Express, Tailwind CSS
+- Frameworks & UI: React Hooks, shadcn/ui, Chart.js, Axios, Spring Boot (learning), Django (learning)
+- Data & Cloud: MySQL, MongoDB, Supabase, Google Cloud Platform, Vertex AI, ETL pipelines, MLOps
+- Tools: Git, GitHub, Postman, VS Code, Jupyter, Android Studio, n8n, Gemini API, Midjourney, DALL·E
 
-**Use your preferred IDE**
+## Portfolio Sections
+- Hero: Snapshot of RESK, current location, social links, and direct contact actions.
+- Projects: Tiered gallery with filters, interactive badges, and quick access to code and live demos.
+- Experience & Internships: Motion-enhanced cards summarizing roles, impact, and duration alongside tech stack tags.
+- Skills: Categorized grid highlighting the breadth across software, AI, cloud, and tooling.
+- Contact: Ready-to-use form plus direct email and social channels.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
+## Run Locally
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+git clone <repo-url>
+cd resk-black-white-glow
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## Contributing & Feedback
+This portfolio is actively evolving. Feel free to open issues, submit pull requests, or reach out for collaboration ideas.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/ac186150-e0a0-4cf8-888d-6526d1a46e67) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## License
+This repository is open for learning and inspiration. Please reach out before reusing significant portions of the design or content.
