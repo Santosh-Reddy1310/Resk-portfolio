@@ -57,6 +57,18 @@ const projects = [
 
   // 🚀 Tier 2: Full-Stack AI Applications
   {
+    title: "AirSafe India – AI-Powered Air Quality Intelligence Dashboard",
+    description:
+      "A production-ready React + TypeScript dashboard monitoring real-time PM2.5 levels across Delhi, Mumbai, Bengaluru, Kolkata, and Chennai with dual-API fallback (OpenWeather + Open-Meteo). Features a Gemini-powered AI copilot that explains charts, analyzes trends, and provides personalized NAAQS-aware health advisories. Deployed on Vercel with responsive Tailwind UI, interactive Recharts visualizations, and CSV fallback data.",
+    tech: ["React", "TypeScript", "Tailwind CSS", "Recharts", "Google Gemini API", "OpenWeather API", "Vercel"],
+    tier: "fullstack-ai",
+    tierLabel: "🚀 Full-Stack AI",
+    links: {
+      github: "https://github.com/Santosh-Reddy1310/AirSafe-IN",
+      demo: "https://airsafe-india.vercel.app/",
+    },
+  },
+  {
     title: "TeslaPulse.AI – Stock Analytics Dashboard",
     description:
       "Real-time dashboard with stock trends, AI-driven sentiment analysis, price forecasting & Gemini chatbot.",
