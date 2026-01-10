@@ -3,8 +3,9 @@ import { ExternalLink, Github, FolderOpen, Code, Sparkles, Zap, Brain, BarChart3
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { projects } from "@/data/portfolio";
 
-const projects = [
+const localProjects = [
   // 🌟 Tier 1: Most Advanced & Impactful Projects
   {
     title: "Healthcare Sustainability AI Agent System",
@@ -392,7 +393,7 @@ const Projects = () => {
               </div>
 
               {/* Animated Background Gradient */}
-              <div className={`absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 ${getTierColor(project.tier)}`}></div>
+              <div className={`absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 ${getTierColor(project.tier)} pointer-events-none`}></div>
 
               <CardHeader className="relative pb-3">
                 <div className="flex items-start gap-3 mb-2">

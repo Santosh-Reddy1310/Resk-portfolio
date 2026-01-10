@@ -1,6 +1,7 @@
 
 import React from 'react';
-import Navbar from '@/components/Navbar';
+import { Home, User, Briefcase, FileText, Mail } from 'lucide-react';
+import { NavBar } from '@/components/ui/tubelight-navbar';
 import Hero from '@/components/Hero';
 import AboutMe from '@/components/AboutMe';
 import Skills from '@/components/Skills';
@@ -9,10 +10,18 @@ import Certifications from '@/components/Certifications';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 
+const navItems = [
+  { name: 'Home', url: '#hero', icon: Home },
+  { name: 'About', url: '#about', icon: User },
+  { name: 'Projects', url: '#projects', icon: Briefcase },
+  { name: 'Contact', url: '#contact', icon: Mail },
+  { name: 'Resume', url: '/resume', icon: FileText },
+];
+
 const Index = () => {
   return (
     <div className="flex flex-col min-h-screen font-outfit">
-      <Navbar />
+      <NavBar items={navItems} />
       <main>
         <Hero />
         <AboutMe />
