@@ -37,8 +37,7 @@ const resumeNavItems = [
   { name: 'Resume', url: '/resume', icon: BookOpenCheck },
   { name: 'Home', url: '/', icon: Home },
   { name: 'About', url: '/#about', icon: Sparkles },
-  { name: 'Projects', url: '/#projects', icon: Briefcase },
-  { name: 'Contact', url: '/#contact', icon: Download }
+  { name: 'Projects', url: '/#projects', icon: Briefcase }
 ];
 
 export default function Resume() {

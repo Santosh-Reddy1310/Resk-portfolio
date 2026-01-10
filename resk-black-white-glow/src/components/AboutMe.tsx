@@ -67,15 +67,6 @@ const AboutMe = () => {
           ))}
         </div>
 
-        {/* Side Involvements */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="mt-12 bg-background p-6 rounded-lg border border-border shadow-sm"
-        >
-        </motion.div>
       </div>
     </section>
   );

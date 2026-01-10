@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { LucideIcon, Moon, Sun } from "lucide-react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { cn } from "@/lib/utils";
 
 export interface NavItem {
@@ -33,6 +34,8 @@ export function NavBar({ items, className, initialActive }: NavBarProps) {
   };
 
   const [theme, setTheme] = useState<"light" | "dark">(getInitialTheme);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleResize = () => {
@@ -47,6 +50,20 @@ export function NavBar({ items, className, initialActive }: NavBarProps) {
   useEffect(() => {
     setActiveTab(defaultActive);
   }, [defaultActive]);
+
+  useEffect(() => {
+    const normalizedPath = location.pathname;
+    const matchingItem = items.find((item) => {
+      const [path] = item.url.split("#");
+      if (!path.startsWith("/")) {
+        return false;
+      }
+      return path === normalizedPath || (path === "" && normalizedPath === "/");
+    });
+    if (matchingItem) {
+      setActiveTab(matchingItem.name);
+    }
+  }, [items, location.pathname]);
 
   if (!items.length) {
     return null;
@@ -68,6 +85,17 @@ export function NavBar({ items, className, initialActive }: NavBarProps) {
     ? "bg-slate-950/70 border-slate-700 text-slate-50"
     : "bg-white/90 border-slate-200 text-slate-900";
 
+  const isClientRoute = (url: string) =>
+    url.startsWith("/") && !url.startsWith("//") && !url.includes("#");
+
+  const handleNavClick = (event: React.MouseEvent<HTMLAnchorElement>, item: NavItem) => {
+    if (isClientRoute(item.url)) {
+      event.preventDefault();
+      navigate(item.url);
+    }
+    setActiveTab(item.name);
+  };
+
   return (
     <div
       className={cn(
@@ -84,7 +112,7 @@ export function NavBar({ items, className, initialActive }: NavBarProps) {
             <a
               key={item.name}
               href={item.url}
-              onClick={() => setActiveTab(item.name)}
+              onClick={(event) => handleNavClick(event, item)}
               className={cn(
                 "relative cursor-pointer text-sm font-semibold px-6 py-2 rounded-full transition-colors",
                 "text-foreground/80 hover:text-primary",

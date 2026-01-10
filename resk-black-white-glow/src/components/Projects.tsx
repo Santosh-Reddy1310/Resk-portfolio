@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ExternalLink, Github, FolderOpen, Code, Sparkles, Zap, Brain, BarChart3, Globe, Palette } from "lucide-react";
+import { motion } from 'framer-motion';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -318,159 +319,356 @@ const Projects = () => {
     { value: 'ui-ux', label: 'UI/UX Design', icon: <Palette className="h-4 w-4" /> },
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 40, scale: 0.95 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        type: 'spring',
+        stiffness: 100,
+        damping: 12,
+        duration: 0.6,
+      }
+    }
+  };
+
+  const headerVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: 'spring',
+        stiffness: 100,
+        damping: 15,
+      }
+    }
+  };
+
   return (
-    <section id="projects" className="py-16 md:py-24 bg-gradient-to-b from-secondary/5 via-secondary/10 to-secondary/5">
-      <div className="container px-4 md:px-6">
+    <section id="projects" className="py-16 md:py-24 bg-gradient-to-b from-secondary/5 via-secondary/10 to-secondary/5 relative overflow-hidden">
+      {/* Animated background elements */}
+      <motion.div
+        className="absolute top-10 left-10 w-40 h-40 bg-primary/5 rounded-full blur-3xl"
+        animate={{ y: [0, 20, 0], x: [0, 10, 0] }}
+        transition={{ duration: 6, repeat: Infinity }}
+      />
+      <motion.div
+        className="absolute bottom-20 right-10 w-60 h-60 bg-primary/5 rounded-full blur-3xl"
+        animate={{ y: [0, -20, 0], x: [0, -15, 0] }}
+        transition={{ duration: 8, repeat: Infinity }}
+      />
+
+      <div className="container px-4 md:px-6 relative z-10">
         {/* Header Section */}
-        <div className="text-center max-w-[800px] mx-auto mb-12 animate-in fade-in slide-in-from-bottom duration-700">
-          <div className="inline-block mb-4">
+        <motion.div
+          className="text-center max-w-[800px] mx-auto mb-12"
+          variants={headerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <motion.div
+            className="inline-block mb-4"
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ type: 'spring', stiffness: 120 }}
+            viewport={{ once: true }}
+          >
             <Badge variant="outline" className="px-4 py-2 text-sm font-semibold">
-              <Code className="h-4 w-4 mr-2 inline" />
+              <motion.span
+                animate={{ rotate: 360 }}
+                transition={{ duration: 3, repeat: Infinity }}
+                className="inline-block mr-2"
+              >
+                <Code className="h-4 w-4" />
+              </motion.span>
               Featured Work
             </Badge>
-          </div>
-          <h2 className="text-3xl font-bold tracking-tighter md:text-5xl mb-4 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+          </motion.div>
+          <motion.h2
+            className="text-3xl font-bold tracking-tighter md:text-5xl mb-4 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            viewport={{ once: true }}
+          >
             Projects Portfolio
-          </h2>
-          <div className="h-1 w-20 bg-gradient-to-r from-primary to-primary/50 mx-auto mb-6 rounded-full"></div>
-          <p className="text-muted-foreground md:text-lg leading-relaxed">
+          </motion.h2>
+          <motion.div
+            className="h-1 w-20 bg-gradient-to-r from-primary to-primary/50 mx-auto mb-6 rounded-full"
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+            viewport={{ once: true }}
+          />
+          <motion.p
+            className="text-muted-foreground md:text-lg leading-relaxed"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
+            viewport={{ once: true }}
+          >
             Explore my collection of <span className="font-semibold text-foreground">{projects.length}+ projects</span> spanning AI/ML, full-stack development, data analytics, and UI/UX design.
-          </p>
+          </motion.p>
 
           {/* Warning Note */}
-          <div className="mt-6 p-4 bg-orange-500/10 border border-orange-500/20 rounded-lg backdrop-blur-sm">
+          <motion.div
+            className="mt-6 p-4 bg-orange-500/10 border border-orange-500/20 rounded-lg backdrop-blur-sm"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.4 }}
+            viewport={{ once: true }}
+          >
             <p className="text-sm text-orange-600 dark:text-orange-400 flex items-center justify-center gap-2">
-              <Zap className="h-4 w-4" />
+              <motion.span animate={{ rotate: [0, 15, -15, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>
+                <Zap className="h-4 w-4" />
+              </motion.span>
               Some projects require backend servers or may take a moment to load — thanks for your patience! 🚀
             </p>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-2 mb-12 animate-in fade-in slide-in-from-bottom duration-700 delay-150">
-          {filterOptions.map((option) => (
-            <Button
+        <motion.div
+          className="flex flex-wrap justify-center gap-2 mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          {filterOptions.map((option, idx) => (
+            <motion.div
               key={option.value}
-              variant={filter === option.value ? "default" : "outline"}
-              size="sm"
-              onClick={() => setFilter(option.value)}
-              className={`transition-all duration-300 hover:scale-105 ${
-                filter === option.value 
-                  ? 'shadow-lg shadow-primary/25' 
-                  : 'hover:shadow-md'
-              }`}
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ delay: idx * 0.05 }}
+              viewport={{ once: true }}
             >
-              {option.icon}
-              <span className="ml-2">{option.label}</span>
-            </Button>
+              <Button
+                variant={filter === option.value ? "default" : "outline"}
+                size="sm"
+                onClick={() => setFilter(option.value)}
+                className={`transition-all duration-300 hover:scale-105 ${
+                  filter === option.value 
+                    ? 'shadow-lg shadow-primary/25' 
+                    : 'hover:shadow-md'
+                }`}
+                asChild
+              >
+                <motion.span
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  {option.icon}
+                  <span className="ml-2">{option.label}</span>
+                </motion.span>
+              </Button>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Projects Count */}
-        <div className="text-center mb-8">
+        <motion.div
+          className="text-center mb-8"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.3 }}
+          viewport={{ once: true }}
+        >
           <p className="text-sm text-muted-foreground">
-            Showing <span className="font-bold text-primary">{filteredProjects.length}</span> project{filteredProjects.length !== 1 ? 's' : ''}
+            Showing <motion.span className="font-bold text-primary inline-block" key={filteredProjects.length}
+              initial={{ scale: 1.2 }}
+              animate={{ scale: 1 }}
+              transition={{ type: 'spring', stiffness: 300 }}
+            >{filteredProjects.length}</motion.span> project{filteredProjects.length !== 1 ? 's' : ''}
           </p>
-        </div>
+        </motion.div>
 
         {/* Projects Grid */}
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <motion.div
+          className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+        >
           {filteredProjects.map((project, i) => (
-            <Card
+            <motion.div
               key={i}
-              className={`group flex flex-col h-full transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10 border-2 cursor-pointer overflow-hidden
-                ${hoveredIndex === i ? 'scale-105 -translate-y-2' : 'scale-100'}
-                animate-in fade-in slide-in-from-bottom
-              `}
-              style={{ animationDelay: `${i * 50}ms` }}
-              onMouseEnter={() => setHoveredIndex(i)}
-              onMouseLeave={() => setHoveredIndex(null)}
+              variants={itemVariants}
+              whileHover={{ y: -8, transition: { duration: 0.3 } }}
             >
-              {/* Tier Badge */}
-              <div className={`absolute top-0 right-0 ${getTierColor(project.tier)} text-white px-3 py-1 text-xs font-bold rounded-bl-lg flex items-center gap-1 shadow-lg`}>
-                {getTierIcon(project.tier)}
-                <span className="hidden sm:inline">{project.tierLabel}</span>
-              </div>
+              <Card
+                className={`group flex flex-col h-full transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10 border-2 cursor-pointer overflow-hidden relative
+                  ${hoveredIndex === i ? 'scale-105' : 'scale-100'}
+                `}
+                onMouseEnter={() => setHoveredIndex(i)}
+                onMouseLeave={() => setHoveredIndex(null)}
+              >
+                {/* Animated glow on hover */}
+                <motion.div
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 pointer-events-none"
+                  transition={{ duration: 0.3 }}
+                  style={{
+                    background: 'radial-gradient(circle at var(--mouse-x, 0) var(--mouse-y, 0), rgba(59, 130, 246, 0.1), transparent 80%)',
+                  }}
+                />
 
-              {/* Animated Background Gradient */}
-              <div className={`absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 ${getTierColor(project.tier)} pointer-events-none`}></div>
+                {/* Tier Badge */}
+                <motion.div
+                  className={`absolute top-0 right-0 ${getTierColor(project.tier)} text-white px-3 py-1 text-xs font-bold rounded-bl-lg flex items-center gap-1 shadow-lg`}
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.2 }}
+                >
+                  {getTierIcon(project.tier)}
+                  <span className="hidden sm:inline">{project.tierLabel}</span>
+                </motion.div>
 
-              <CardHeader className="relative pb-3">
-                <div className="flex items-start gap-3 mb-2">
-                  <div className={`p-2 rounded-lg ${getTierColor(project.tier)} bg-opacity-10 group-hover:scale-110 transition-transform duration-300`}>
-                    <FolderOpen className="h-5 w-5 text-primary" />
-                  </div>
-                  <CardTitle className="text-lg leading-tight group-hover:text-primary transition-colors duration-300">
-                    {project.title}
-                  </CardTitle>
-                </div>
-              </CardHeader>
+                {/* Animated Background Gradient */}
+                <motion.div
+                  className={`absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 ${getTierColor(project.tier)} pointer-events-none`}
+                />
 
-              <CardContent className="flex-grow relative">
-                <CardDescription className="text-sm mb-4 leading-relaxed">
-                  {project.description}
-                </CardDescription>
-                <div className="flex flex-wrap gap-2">
-                  {project.tech.slice(0, hoveredIndex === i ? project.tech.length : 4).map((tech, j) => (
-                    <Badge
-                      key={j}
-                      variant="secondary"
-                      className="text-xs px-2 py-1 transition-all duration-300 hover:scale-110 hover:shadow-md"
+                <CardHeader className="relative pb-3">
+                  <div className="flex items-start gap-3 mb-2">
+                    <motion.div
+                      className={`p-2 rounded-lg ${getTierColor(project.tier)} bg-opacity-10`}
+                      whileHover={{ scale: 1.1, rotate: 5 }}
+                      transition={{ type: 'spring', stiffness: 200 }}
                     >
-                      {tech}
-                    </Badge>
-                  ))}
-                  {!hoveredIndex && project.tech.length > 4 && (
-                    <Badge variant="outline" className="text-xs px-2 py-1">
-                      +{project.tech.length - 4} more
-                    </Badge>
-                  )}
-                </div>
-              </CardContent>
+                      <FolderOpen className="h-5 w-5 text-primary" />
+                    </motion.div>
+                    <CardTitle className="text-lg leading-tight group-hover:text-primary transition-colors duration-300">
+                      {project.title}
+                    </CardTitle>
+                  </div>
+                </CardHeader>
 
-              <CardFooter className="flex justify-between border-t pt-4 relative bg-secondary/5">
-                <Button 
-                  variant="ghost" 
-                  size="sm" 
-                  asChild 
-                  className="group/btn hover:scale-110 hover:bg-primary/10 transition-all duration-300"
-                >
-                  <a href={project.links.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                    <Github className="h-4 w-4 group-hover/btn:rotate-12 transition-transform duration-300" />
-                    <span className="font-semibold">Code</span>
-                  </a>
-                </Button>
-                <Button 
-                  variant="ghost" 
-                  size="sm" 
-                  asChild 
-                  className="group/btn hover:scale-110 hover:bg-primary/10 transition-all duration-300"
-                >
-                  <a href={project.links.demo} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                    <ExternalLink className="h-4 w-4 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform duration-300" />
-                    <span className="font-semibold">Demo</span>
-                  </a>
-                </Button>
-              </CardFooter>
-            </Card>
+                <CardContent className="flex-grow relative">
+                  <CardDescription className="text-sm mb-4 leading-relaxed">
+                    {project.description}
+                  </CardDescription>
+                  <motion.div
+                    className="flex flex-wrap gap-2"
+                    initial="hidden"
+                    animate="visible"
+                    variants={{
+                      hidden: { opacity: 0 },
+                      visible: {
+                        opacity: 1,
+                        transition: {
+                          staggerChildren: 0.05,
+                        }
+                      }
+                    }}
+                  >
+                    {project.tech.slice(0, hoveredIndex === i ? project.tech.length : 4).map((tech, j) => (
+                      <motion.div
+                        key={j}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: j * 0.05 }}
+                      >
+                        <Badge
+                          variant="secondary"
+                          className="text-xs px-2 py-1 transition-all duration-300"
+                        >
+                          {tech}
+                        </Badge>
+                      </motion.div>
+                    ))}
+                    {hoveredIndex !== i && project.tech.length > 4 && (
+                      <motion.div
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                      >
+                        <Badge variant="outline" className="text-xs px-2 py-1">
+                          +{project.tech.length - 4} more
+                        </Badge>
+                      </motion.div>
+                    )}
+                  </motion.div>
+                </CardContent>
+
+                <CardFooter className="flex justify-between border-t pt-4 relative bg-secondary/5">
+                  <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+                    <Button 
+                      variant="ghost" 
+                      size="sm" 
+                      asChild 
+                      className="group/btn hover:scale-110 hover:bg-primary/10 transition-all duration-300"
+                    >
+                      <a href={project.links.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                        <motion.span animate={{ rotate: hoveredIndex === i ? 12 : 0 }} transition={{ duration: 0.3 }}>
+                          <Github className="h-4 w-4" />
+                        </motion.span>
+                        <span className="font-semibold">Code</span>
+                      </a>
+                    </Button>
+                  </motion.div>
+                  <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+                    <Button 
+                      variant="ghost" 
+                      size="sm" 
+                      asChild 
+                      className="group/btn hover:scale-110 hover:bg-primary/10 transition-all duration-300"
+                    >
+                      <a href={project.links.demo} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                        <motion.span animate={{ x: hoveredIndex === i ? 2 : 0, y: hoveredIndex === i ? -2 : 0 }} transition={{ duration: 0.3 }}>
+                          <ExternalLink className="h-4 w-4" />
+                        </motion.span>
+                        <span className="font-semibold">Demo</span>
+                      </a>
+                    </Button>
+                  </motion.div>
+                </CardFooter>
+              </Card>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* View More Button */}
-        <div className="mt-12 text-center animate-in fade-in slide-in-from-bottom duration-700 delay-300">
-          <Button 
-            variant="outline" 
-            size="lg"
-            className="gap-2 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-primary/20 group" 
-            asChild
-          >
-            <a href="https://github.com/Santosh-Reddy1310" target="_blank" rel="noopener noreferrer">
-              <Github className="h-5 w-5 group-hover:rotate-12 transition-transform duration-300" />
-              View More on GitHub
-              <ExternalLink className="h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
-            </a>
-          </Button>
-        </div>
+        <motion.div
+          className="mt-12 text-center"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+          viewport={{ once: true }}
+        >
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <Button 
+              variant="outline" 
+              size="lg"
+              className="gap-2 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-primary/20 group" 
+              asChild
+            >
+              <a href="https://github.com/Santosh-Reddy1310" target="_blank" rel="noopener noreferrer">
+                <motion.span animate={{ rotate: [0, 15, -15, 0] }} transition={{ duration: 2, repeat: Infinity }}>
+                  <Github className="h-5 w-5" />
+                </motion.span>
+                View More on GitHub
+                <motion.span animate={{ x: [0, 3, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>
+                  <ExternalLink className="h-4 w-4" />
+                </motion.span>
+              </a>
+            </Button>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );
