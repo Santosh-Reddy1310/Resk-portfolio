@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Download, Sparkles, BookOpenCheck, Home, Briefcase } from 'lucide-react';
+import { Download, Sparkles, FileText, Home, Briefcase, User } from 'lucide-react';
 import { NavBar } from '@/components/ui/tubelight-navbar';
 import { projects, experiences } from '@/data/portfolio';
 
@@ -34,10 +34,10 @@ const highlights = [
 ];
 
 const resumeNavItems = [
-  { name: 'Resume', url: '/resume', icon: BookOpenCheck },
-  { name: 'Home', url: '/', icon: Home },
-  { name: 'About', url: '/#about', icon: Sparkles },
-  { name: 'Projects', url: '/#projects', icon: Briefcase }
+  { name: 'Home', url: '#hero', icon: Home },
+  { name: 'About', url: '#about', icon: User },
+  { name: 'Projects', url: '#projects', icon: Briefcase },
+  { name: 'Resume', url: '/resume', icon: FileText }
 ];
 
 export default function Resume() {
