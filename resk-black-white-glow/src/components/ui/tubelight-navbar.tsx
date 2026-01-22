@@ -53,17 +53,42 @@ export function NavBar({ items, className, initialActive }: NavBarProps) {
 
   useEffect(() => {
     const normalizedPath = location.pathname;
-    const matchingItem = items.find((item) => {
-      const [path] = item.url.split("#");
-      if (!path.startsWith("/")) {
-        return false;
-      }
-      return path === normalizedPath || (path === "" && normalizedPath === "/");
-    });
+    const currentHash = location.hash; // includes '#'
+
+    let matchingItem = null;
+
+    if (currentHash) {
+      matchingItem = items.find((item) => item.url === currentHash);
+    }
+
+    if (!matchingItem) {
+      matchingItem = items.find((item) => {
+        const [path] = item.url.split("#");
+        if (!path.startsWith("/")) {
+          return false;
+        }
+        return path === normalizedPath || (path === "" && normalizedPath === "/");
+      });
+    }
+
     if (matchingItem) {
       setActiveTab(matchingItem.name);
     }
-  }, [items, location.pathname]);
+  }, [items, location.pathname, location.hash]);
+
+  // When the hash changes on the home page, scroll to the anchor (smoothly).
+  useEffect(() => {
+    if (typeof document === "undefined") return;
+    if (location.hash && (location.pathname === "/" || location.pathname === "")) {
+      const id = location.hash.replace("#", "");
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      } else {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    }
+  }, [location.pathname, location.hash]);
 
   if (!items.length) {
     return null;
@@ -88,11 +113,31 @@ export function NavBar({ items, className, initialActive }: NavBarProps) {
   const isClientRoute = (url: string) =>
     url.startsWith("/") && !url.startsWith("//") && !url.includes("#");
 
+  const isHashRoute = (url: string) => url.startsWith("#");
+
   const handleNavClick = (event: React.MouseEvent<HTMLAnchorElement>, item: NavItem) => {
     if (isClientRoute(item.url)) {
       event.preventDefault();
       navigate(item.url);
+      setActiveTab(item.name);
+      return;
     }
+
+    if (isHashRoute(item.url)) {
+      // Same-page anchor: allow browser default behavior to perform scrolling
+      if (location.pathname === "/" || location.pathname === "") {
+        setActiveTab(item.name);
+        return;
+      }
+
+      // From other pages, navigate to root with the hash so anchors work correctly
+      event.preventDefault();
+      navigate(`/${item.url}`);
+      setActiveTab(item.name);
+      return;
+    }
+
+    // External links: let default behavior occur
     setActiveTab(item.name);
   };
 
