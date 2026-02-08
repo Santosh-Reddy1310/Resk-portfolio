@@ -9,6 +9,42 @@ import { projects } from "@/data/portfolio";
 const localProjects = [
   // 🌟 Tier 1: Most Advanced & Impactful Projects
   {
+    title: "DESY – AI-Powered Decision Intelligence Platform",
+    description:
+      "An intelligent decision-making platform that converts complex, multi-factor choices into confident, data-informed decisions using structured Decision Intelligence and Multi-Criteria Decision Analysis (MCDA). Features AI-powered scoring, transparent reasoning, interactive visualizations, what-if analysis, and multi-LLM provider support.",
+    tech: ["Artificial Intelligence", "LLM", "Decision Intelligence", "MCDA", "Full-Stack Development", "Next.js", "Groq API"],
+    tier: "advanced",
+    tierLabel: "🌟 Most Advanced",
+    links: {
+      github: "#",
+      demo: "https://desy.vercel.app",
+    },
+  },
+  {
+    title: "RxLens – Intelligent Medication Awareness Tool",
+    description:
+      "An offline, terminal-based medication awareness system using a 7-agent agentic AI architecture to help users understand potential interactions between prescription drugs, OTC medicines, and supplements. Features explainable AI, risk stratification, and ethics-first system design.",
+    tech: ["Python", "CrewAI", "Agentic AI", "Terminal UI", "Healthcare AI", "Responsible AI"],
+    tier: "advanced",
+    tierLabel: "🌟 Most Advanced",
+    links: {
+      github: "https://github.com/Santosh-Reddy1310/RX-Lens",
+      demo: "#",
+    },
+  },
+  {
+    title: "Nexus Observatory – Global Open Source Contribution Dashboard",
+    description:
+      "A production-grade real-time visualization dashboard transforming 50,000+ GitHub repositories into an interactive global observatory of open-source activity. Features animated contribution counters, pixelated world heatmap, sentiment analysis on commits, and Peak Storm mode with live updates.",
+    tech: ["Next.js", "TypeScript", "Supabase", "D3", "Framer Motion", "Vercel", "Real-Time Systems"],
+    tier: "advanced",
+    tierLabel: "🌟 Most Advanced",
+    links: {
+      github: "https://github.com/Santosh-Reddy1310/Nexus",
+      demo: "https://nexus-one-eosin.vercel.app/",
+    },
+  },
+  {
     title: "Healthcare Sustainability AI Agent System",
     description:
       "A modular AI system composed of specialized agents (Data Collector, Analysis, Report Generator, Intervention Planner) to automate multi-facility hospital sustainability analysis. Provides data normalization, trend detection, anomaly identification, and actionable sustainability interventions through rich narrative and visual reports.",
