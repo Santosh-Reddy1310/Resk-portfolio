@@ -1,5 +1,29 @@
 export const projects = [
   {
+    title: "KLAROS – AI-Powered Decision Intelligence Platform",
+    description:
+      "A full-stack Decision Intelligence platform combining Multi-Criteria Decision Analysis (MCDA) with LLM semantic scoring to deliver structured, mathematically traceable recommendations. Features weighted criteria engine, live what-if re-ranking, score matrix visualization, radar charts, timestamped decision history, PDF export, and secure authentication with multi-LLM failover support.",
+    tech: ["React", "TypeScript", "Tailwind CSS", "Vercel AI SDK", "Supabase", "PostgreSQL", "Groq", "OpenRouter", "Vercel"],
+    tier: "advanced",
+    tierLabel: "🌟 Most Advanced",
+    links: {
+      github: "https://github.com/Santosh-Reddy1310/KLAROS",
+      demo: "https://klaros.vercel.app/",
+    },
+  },
+  {
+    title: "Nexus Observatory – Real-Time GitHub OSS Analytics Dashboard",
+    description:
+      "A production-grade real-time visualization dashboard transforming 50,000+ GitHub repositories into an interactive global observatory of open-source activity. Features animated contribution counters, pixelated world heatmap with d3-geo, commit sentiment analysis, contributor leaderboards, and Peak Storm mode with live updates. Achieved 95+ Lighthouse score with sub-second data refresh.",
+    tech: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS", "Framer Motion", "d3-geo", "GitHub API", "Vercel"],
+    tier: "advanced",
+    tierLabel: "🌟 Most Advanced",
+    links: {
+      github: "https://github.com/Santosh-Reddy1310/Nexus",
+      demo: "https://nexus-one-eosin.vercel.app/",
+    },
+  },
+  {
     title: "Healthcare Sustainability AI Agent System",
     description:
       "A modular AI system composed of specialized agents (Data Collector, Analysis, Report Generator, Intervention Planner) to automate multi-facility hospital sustainability analysis. Provides data normalization, trend detection, anomaly identification, and actionable sustainability interventions through rich narrative and visual reports.",

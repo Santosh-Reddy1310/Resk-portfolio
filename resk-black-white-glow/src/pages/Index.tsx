@@ -1,14 +1,24 @@
 
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { Home, User, Briefcase, FileText, Mail } from 'lucide-react';
 import { NavBar } from '@/components/ui/tubelight-navbar';
 import Hero from '@/components/Hero';
-import AboutMe from '@/components/AboutMe';
-import Skills from '@/components/Skills';
-import Projects from '@/components/Projects';
-import Certifications from '@/components/Certifications';
-import Contact from '@/components/Contact';
-import Footer from '@/components/Footer';
+import {
+  HeroSkeleton,
+  AboutSkeleton,
+  SkillsSkeleton,
+  ProjectsSkeleton,
+  CertificationsSkeleton,
+  ContactSkeleton,
+} from '@/components/Skeletons';
+
+// Lazy load heavy components
+const AboutMe = lazy(() => import('@/components/AboutMe'));
+const Skills = lazy(() => import('@/components/Skills'));
+const Projects = lazy(() => import('@/components/Projects'));
+const Certifications = lazy(() => import('@/components/Certifications'));
+const Contact = lazy(() => import('@/components/Contact'));
+const Footer = lazy(() => import('@/components/Footer'));
 
 const navItems = [
   { name: 'Home', url: '#hero', icon: Home },
@@ -21,14 +31,28 @@ const Index = () => {
   return (
     <div className="flex flex-col min-h-screen font-outfit">
       <NavBar items={navItems} />
-      <main>
-        <Hero />
-        <AboutMe />
-        <Skills />
-        <Projects />
-        <Certifications />
+      <main className="flex-1">
+        <Suspense fallback={<HeroSkeleton />}>
+          <Hero />
+        </Suspense>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Suspense fallback={<AboutSkeleton />}>
+            <AboutMe />
+          </Suspense>
+          <Suspense fallback={<SkillsSkeleton />}>
+            <Skills />
+          </Suspense>
+          <Suspense fallback={<ProjectsSkeleton />}>
+            <Projects />
+          </Suspense>
+          <Suspense fallback={<CertificationsSkeleton />}>
+            <Certifications />
+          </Suspense>
+        </div>
       </main>
-      <Footer />
+      <Suspense fallback={null}>
+        <Footer />
+      </Suspense>
     </div>
   );
 };
